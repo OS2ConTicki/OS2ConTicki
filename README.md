@@ -20,26 +20,43 @@ Two parts are needed: “admin” for managing conferences and “app” for dis
 
 ### Phrasebook
 
-Conference (conference)
-A conference consists of a series of events.
+<dl>
+  <dt>Conference (conference)</dt>
+  <dd>A conference consists of a series of events.</dd>
+</dl>
 
-Events (arrangementer)
-An event is a time and date limited incident that takes places in one location, with one or more speakers. An event can have multiple tags and but only one theme.
+<dl>
+  <dt>Events (arrangementer)</dt>
+  <dd>An event is a time and date limited incident that takes places in one location, with one or more speakers. An event can have multiple tags and but only one theme.</dd>
+</dl>
 
-Tags (emner)
-Tags are subjects related to different events. Tags are used as a way of inspiring users to explore different themes.
+<dl>
+  <dt>Tags (emner)</dt>
+  <dd>Tags are subjects related to different events. Tags are used as a way of inspiring users to explore different themes.</dd>
+</dl>
 
-Themes (temaer)
-Events are categorized in terms of different themes. A theme can only be related to one event.
+<dl>
+  <dt>Themes (temaer)</dt>
+  <dd>Events are categorized in terms of different themes. A theme can only be related to one event.</dd>
+</dl>
 
-Location (sted)
-Where the event takes place. An event can only have one location.
+<dl>
+  <dt>Location (sted)</dt>
+  <dd>Where the event takes place. An event can only have one location.</dd>
+</dl>
 
-Organizer (arrangør)
-A conference can have one organizer where as an event can have one or more organizers.
+<dl>
+  <dt>Organizer (arrangør)</dt>
+  <dd>A conference can have one organizer where as an event can have one or more organizers.</dd>
+</dl>
 
-Speakers (oplægsholdere)
-A speaker can be associated with one or a number of events.
+<dl>
+  <dt>Speakers (oplægsholdere)</dt>
+  <dd>A speaker can be associated with one or a number of events.</dd>
+</dl>
 
-Sponsors (sponsorer)
-A conference (not an event) can have one or multiple sponsors.
+<dl>
+  <dt>Sponsors (sponsorer)</dt>
+  <dd>A conference (not an event) can have one or multiple sponsors.</dd>
+</dl>
+
