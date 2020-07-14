@@ -11,7 +11,7 @@ Two parts are needed: “admin” for managing conferences and “app” for dis
 ### Drupal
 
 * https://github.com/OS2ConTicki/drupal-admin
-* https://github.com/OS2Conference/drupal-app
+* https://github.com/OS2ConTicki/drupal-app
 
 ### Symfony
 
