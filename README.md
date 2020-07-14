@@ -60,3 +60,4 @@ Two parts are needed: “admin” for managing conferences and “app” for dis
   <dd>A conference (not an event) can have one or multiple sponsors.</dd>
 </dl>
 
+![image](https://user-images.githubusercontent.com/31030948/87430713-e5189e80-c5e5-11ea-85f0-ac6cb6aca444.png)
