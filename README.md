@@ -1,4 +1,4 @@
-# OS2Conference
+# OS2ConTicki
 
 A complete conference management system
 
