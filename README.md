@@ -18,7 +18,7 @@ Two parts are needed: “admin” for managing conferences and “app” for dis
 * https://github.com/OS2ConTicki/symfony-admin
 * https://github.com/OS2ConTicki/symfony-app
 
-### Phrasebook
+## Phrasebook
 
 <dl>
   <dt>Conference (conference)</dt>
