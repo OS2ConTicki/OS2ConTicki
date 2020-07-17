@@ -6,7 +6,7 @@ This is the main repository with documentation and specifications (e.g. requirem
 
 ## Implementations
 
-Two parts are needed: “admin” for managing conferences and “app” for displaying data from admin. 
+Two parts are needed: “admin” for managing conferences and “app” for displaying data from admin.
 
 ### Drupal
 
@@ -61,3 +61,7 @@ Two parts are needed: “admin” for managing conferences and “app” for dis
 </dl>
 
 ![image](https://user-images.githubusercontent.com/31030948/87430713-e5189e80-c5e5-11ea-85f0-ac6cb6aca444.png)
+
+## Specifications
+
+See [Entities](docs/spec/README.md) for technical details on properties and relationships on the entities.
