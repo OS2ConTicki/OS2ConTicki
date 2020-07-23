@@ -1,0 +1,8 @@
+{
+    "require": {
+        "php": "^7.3",
+        "ext-json": "*",
+        "symfony/console": "^5.1",
+        "opis/json-schema": "^1.0"
+    }
+}

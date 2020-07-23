@@ -1,0 +1,47 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Opis\JsonSchema\{Schema, Validator};
+use Opis\JsonSchema\Loaders\File;
+use Symfony\Component\Console\Input\{InputArgument, InputInterface};
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\SingleCommandApplication;
+use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\HttpClient\HttpClient;
+
+(new SingleCommandApplication())
+    ->setName('validate-api-data')
+    ->addArgument('schema-url', InputArgument::REQUIRED, 'JSON Schema url.')
+    ->addArgument('data-url', InputArgument::REQUIRED | InputArgument::IS_ARRAY, 'Data urls.')
+    ->setCode(function (InputInterface $input, OutputInterface $output) {
+        $io = new SymfonyStyle($input, $output);
+
+        $schemaUrl = $input->getArgument('schema-url');
+        $dataUrls = $input->getArgument('data-url');
+
+        $content = file_get_contents($schemaUrl);
+        $schema = Schema::fromJsonString($content);
+
+        $validator = new Validator();
+        if (file_exists($schemaUrl)) {
+            $validator->setLoader(new File('json-schema-id:', [dirname($schemaUrl)]));
+        }
+        foreach ($dataUrls as $dataUrl) {
+            $io->section($dataUrl);
+            $content = file_get_contents('-' === $dataUrl ? 'php://stdin' : $dataUrl);
+            $data = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+            $result = $validator->schemaValidation($data, $schema);
+            if ($result->isValid()) {
+                $io->success('$data is valid');
+            } else {
+                $error = $result->getFirstError();
+                $io->error([
+                    '$data is invalid',
+                    'Error: ' . $error->keyword(),
+                    json_encode($error->keywordArgs(), JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT),
+                ]);
+            }
+        }
+    })
+    ->run();

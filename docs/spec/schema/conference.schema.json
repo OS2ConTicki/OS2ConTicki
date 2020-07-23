@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "OS2ConTicki conference",
+  "description": "OS2ConTicki conference.",
+  "oneOf": [
+    {
+      "allOf": [
+        {
+          "$ref": "jsonapi.schema.json#/definitions/success"
+        },
+        {
+          "$ref": "#/definitions/success"
+        }
+      ]
+    },
+    {
+      "$ref": "jsonapi.schema.json#/definitions/failure"
+    },
+    {
+      "$ref": "jsonapi.schema.json#/definitions/info"
+    }
+  ],
+  "definitions": {
+    "success": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/data"
+        }
+      }
+    },
+    "data": {
+      "description": "The document's \"primary data\" is a representation of the resource or collection of resources targeted by a request.",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/resource"
+        },
+        {
+          "description": "An array of resource objects, an array of resource identifier objects, or an empty array ([]), for requests that target resource collections.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/resource"
+          },
+          "uniqueItems": true
+        },
+        {
+          "description": "null if the request is one that might correspond to a single resource, but doesn't currently.",
+          "type": "null"
+        }
+      ]
+    },
+    "resource": {
+      "description": "\"Resource objects\" appear in a JSON:API document to represent resources.",
+      "type": "object",
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/attributes"
+        }
+      }
+    },
+    "attributes": {
+      "description": "Attributes of the conference object.",
+      "type": "object",
+      "properties": {
+        "langcode": { "type": "string" },
+        "title": { "type": "string" },
+        "promote": { "type": "boolean" },
+        "summary": { "type": ["string", "null"] },
+        "description": { "type": "string" },
+        "start_time": { "type": "string", "format": "date-time" },
+        "end_time": { "type": "string", "format": "date-time" },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "meta": {
+              "type": "object",
+              "properties": {
+                "alt": { "type": "string" }
+              },
+              "required": ["alt"]
+            }
+          }
+        },
+        "ticket": {
+          "type": "object",
+          "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "text": { "type": ["string", "null"] }
+          }
+        }
+      },
+      "required": [
+        "langcode",
+        "title",
+        "summary",
+        "description",
+        "start_time",
+        "end_time"
+      ]
+    }
+  }
+}
