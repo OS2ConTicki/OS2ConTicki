@@ -1,0 +1,76 @@
+{
+  "jsonapi": {
+    "version": "1.0",
+    "meta": {
+      "links": {
+        "self": {
+          "href": "http://jsonapi.org/format/1.0/"
+        }
+      }
+    }
+  },
+  "data": {
+    "type": "conference",
+    "id": "f3db7dfa-7162-4e84-bc8d-df808ebf6d9a",
+    "links": {
+      "self": {
+        "href": "https://127.0.0.1:8888/api/conference/f3db7dfa-7162-4e84-bc8d-df808ebf6d9a?resourceVersion=id%3A481"
+      },
+      "event": {
+        "href": "https://127.0.0.1:8888/api/event?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a&sort=field_times.value"
+      },
+      "speaker": {
+        "href": "https://127.0.0.1:8888/api/speaker?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+      },
+      "organizer": {
+        "href": "https://127.0.0.1:8888/api/organizer?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+      },
+      "tag": {
+        "href": "https://127.0.0.1:8888/api/tag?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+      },
+      "theme": {
+        "href": "https://127.0.0.1:8888/api/theme?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+      },
+      "location": {
+        "href": "https://127.0.0.1:8888/api/location?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+      },
+      "sponsor": {
+        "href": "https://127.0.0.1:8888/api/sponsor?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+      },
+      "all": {
+        "href": "https://127.0.0.1:8888/api/event?filter%5Bconference.id%5D=f3db7dfa-7162-4e84-bc8d-df808ebf6d9a&sort=field_times.value&include=conference%2Cconference.organizers%2Clocation%2Corganizers%2Cspeakers%2Csponsors%2Ctags%2Cthemes"
+      }
+    },
+    "attributes": {
+      "langcode": "en",
+      "title": "A very long conference",
+      "created": "2020-07-23T07:45:03+00:00",
+      "changed": "2020-07-23T07:45:03+00:00",
+      "promote": true,
+      "summary": null,
+      "description": "<p>This conference has many events.</p>\n<p>Tickets must be purchased for each event.</p>\n",
+      "start_time": "2001-01-01T00:00:00+00:00",
+      "end_time": "2001-12-31T23:59:59+00:00",
+      "image": {
+        "url": "http://example.com/87",
+        "meta": {
+          "alt": "The image",
+          "stuff": "xx"
+        }
+      }
+    },
+    "relationships": {
+      "organizers": {
+        "data": []
+      },
+      "sponsors": {
+        "data": []
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://127.0.0.1:8888/api/conference/f3db7dfa-7162-4e84-bc8d-df808ebf6d9a"
+    }
+  }
+}
