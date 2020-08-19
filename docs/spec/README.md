@@ -40,13 +40,17 @@ Apart from `tag` and `theme`, all entities have the following attributes
 
 ### `conference` attributes
 
-| Attribute     | Type                       | Description                         |
-|---------------|----------------------------|-------------------------------------|
-| `start_time`  | datetime (ISO 8601 string) | The start time                      |
-| `end_time`    | datetime (ISO 8601 string) | The end time                        |
-| `ticket`      | object                     |                                     |
-| `ticket.url`  | string                     | Url to ticket system                |
-| `ticket.text` | string (nullable)          | Text to show on “Buy ticket” button |
+| Attribute           | Type                       | Description                         |
+|---------------------|----------------------------|-------------------------------------|
+| `start_time`        | datetime (ISO 8601 string) | The start time                      |
+| `end_time`          | datetime (ISO 8601 string) | The end time                        |
+| `ticket`            | object                     |                                     |
+| `ticket.url`        | string                     | Url to ticket system                |
+| `ticket.text`       | string (nullable)          | Text to show on “Buy ticket” button |
+| `app`               | object                     | App metadata                        |
+| `app.logo`          | object                     | App logo (should be 512x512 pixels) |
+| `app.logo.url`      | string                     | App logo url                        |
+| `app.primary_color` | color (css color string)   | Primary app color                   |
 
 ### `event` attributes
 
