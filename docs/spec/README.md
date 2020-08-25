@@ -40,18 +40,18 @@ Apart from `tag` and `theme`, all entities have the following attributes
 
 ### `conference` attributes
 
-| Attribute                    | Type                       | Description                                                                                          |
-|------------------------------|----------------------------|------------------------------------------------------------------------------------------------------|
-| `start_time`                 | datetime (ISO 8601 string) | The start time                                                                                       |
-| `end_time`                   | datetime (ISO 8601 string) | The end time                                                                                         |
-| `ticket`                     | object                     |                                                                                                      |
-| `ticket.url`                 | string                     | Url to ticket system                                                                                 |
-| `ticket.text`                | string (nullable)          | Text to show on “Buy ticket” button                                                                  |
-| `app`                        | object                     | App metadata                                                                                         |
-| `app.icons`                  | object                     | App icons urls indexed by `«width»x«height»`, e.g. `{"196x196":	"https://lorempixel.com/196/196/"}`  |
-| `app.logo`                   | object                     | App logo (should be 512x512 pixels)                                                                  |
-| `app.logo.url`               | string                     | App logo url                                                                                         |
-| `app.primary_color`          | color (css color string)   | Primary app color                                                                                    |
+| Attribute           | Type                       | Description                                                                                          |
+|---------------------|----------------------------|------------------------------------------------------------------------------------------------------|
+| `start_time`        | datetime (ISO 8601 string) | The start time                                                                                       |
+| `end_time`          | datetime (ISO 8601 string) | The end time                                                                                         |
+| `ticket`            | object                     |                                                                                                      |
+| `ticket.url`        | string                     | Url to ticket system                                                                                 |
+| `ticket.text`       | string (nullable)          | Text to show on “Buy ticket” button                                                                  |
+| `app`               | object                     | App metadata                                                                                         |
+| `app.logo`          | string                     | App logo url (should be 512x512 pixels)                                                              |
+| `app.logo_svg`      | string (optional)          | App SVG logo url                                                                                     |
+| `app.icons`         | object                     | App icons urls indexed by `«width»x«height»`, e.g. `{"196x196":	"https://lorempixel.com/196/196/"}` |
+| `app.primary_color` | color (css color string)   | Primary app color                                                                                    |
 
 ### `event` attributes
 
