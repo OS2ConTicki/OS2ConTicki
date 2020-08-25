@@ -83,10 +83,10 @@ Apart from `conference`, all entities have the following relationships
 
 ### `event` relationships
 
-| Relationship | Description |
-|--------------|-------------|
-| `organizers` |             |
-| `location`   |             |
-| `speakers`   |             |
-| `tags`       |             |
-| `themes`     |             |
+| Relationship | Description                     |
+|--------------|---------------------------------|
+| `organizers` | List of organizers of the event |
+| `location`   | The location of the event       |
+| `speakers`   | List of speakers at the event   |
+| `tags`       | List of tags for the event      |
+| `themes`     | List of themes for the event    |
