@@ -42,6 +42,7 @@ Apart from `tag` and `theme`, all entities have the following attributes
 
 | Attribute           | Type                       | Description                                                                                          |
 |---------------------|----------------------------|------------------------------------------------------------------------------------------------------|
+| `language`          | string (ISO 639-1 Code)    | The language for the conference                                                                      |
 | `start_time`        | datetime (ISO 8601 string) | The start time                                                                                       |
 | `end_time`          | datetime (ISO 8601 string) | The end time                                                                                         |
 | `ticket`            | object                     |                                                                                                      |
@@ -57,6 +58,7 @@ Apart from `tag` and `theme`, all entities have the following attributes
 
 | Attribute     | Type                       | Description                         |
 |---------------|----------------------------|-------------------------------------|
+| `language`    | string (ISO 639-1 Code)    | The language for the event          |
 | `start_time`  | datetime (ISO 8601 string) | The start time                      |
 | `end_time`    | datetime (ISO 8601 string) | The end time                        |
 | `ticket`      | object                     |                                     |
