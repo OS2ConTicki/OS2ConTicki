@@ -40,19 +40,22 @@ Apart from `tag` and `theme`, all entities have the following attributes
 
 ### `conference` attributes
 
-| Attribute           | Type                       | Description                                                                                          |
-|---------------------|----------------------------|------------------------------------------------------------------------------------------------------|
-| `language`          | string (ISO 639-1 Code)    | The language for the conference                                                                      |
-| `start_time`        | datetime (ISO 8601 string) | The start time                                                                                       |
-| `end_time`          | datetime (ISO 8601 string) | The end time                                                                                         |
-| `ticket`            | object                     |                                                                                                      |
-| `ticket.url`        | string                     | Url to ticket system                                                                                 |
-| `ticket.text`       | string (nullable)          | Text to show on “Buy ticket” button                                                                  |
-| `app`               | object                     | App metadata                                                                                         |
-| `app.logo`          | string                     | App logo url (should be 512x512 pixels)                                                              |
-| `app.logo_svg`      | string (optional)          | App SVG logo url                                                                                     |
-| `app.icons`         | object                     | App icons urls indexed by `«width»x«height»`, e.g. `{"196x196":	"https://lorempixel.com/196/196/"}` |
-| `app.primary_color` | color (css color string)   | Primary app color                                                                                    |
+| Attribute                          | Type                       | Description                                                                                                   |
+|------------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------|
+| `language`                         | string (ISO 639-1 Code)    | The language for the conference                                                                               |
+| `start_time`                       | datetime (ISO 8601 string) | The start time                                                                                                |
+| `end_time`                         | datetime (ISO 8601 string) | The end time                                                                                                  |
+| `ticket`                           | object                     |                                                                                                               |
+| `ticket.url`                       | string                     | Url to ticket system                                                                                          |
+| `ticket.text`                      | string (nullable)          | Text to show on “Buy ticket” button                                                                           |
+| `app`                              | object                     | App metadata                                                                                                  |
+| `app.logo`                         | string                     | App logo url (should be 512x512 pixels)                                                                       |
+| `app.logo_svg`                     | string (optional)          | App SVG logo url                                                                                              |
+| `app.icons`                        | object                     | App icons urls indexed by `«width»x«height»`, e.g. `{"196x196":	"https://lorempixel.com/196/196/"}`          |
+| `app.primary_color`                | color (css color string)   | Primary app color                                                                                             |
+| `app.accessibility_statement`      | object (nullable)          | Optional information on accessibility statement                                                               |
+| `app.accessibility_statement.url`  | string                     | Url to accessibility statement. A link to the accessibility statement must be shown in the footer of the app. |
+| `app.accessibility_statement.text` | string (nullable)          | Optional text to display on accessibility statement link                                                      |
 
 ### `event` attributes
 
